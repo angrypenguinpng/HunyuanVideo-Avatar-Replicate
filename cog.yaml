@@ -1,0 +1,23 @@
+build:
+  gpu: true
+  cuda: "12.4"
+  system_packages:
+    - "ffmpeg"
+    - "git"
+  python_version: "3.10"
+  python_packages:
+    - "torch==2.4.0"
+    - "torchvision==0.19.0"
+    - "torchaudio==2.4.0"
+    - "gradio==3.39.0"
+    - "diffusers==0.33.0"
+    - "transformers==4.41.2"
+    - "loguru"
+    - "einops"
+    - "ninja"
+  run:
+    - "git clone https://github.com/Tencent/HunyuanVideo-Avatar.git /workspace/HunyuanVideo-Avatar"
+    - "cd /workspace/HunyuanVideo-Avatar && pip install -r requirements.txt"
+    - "pip install git+https://github.com/Dao-AILab/flash-attention.git@v2.6.3"
+
+predict: "predict.py:Predictor"

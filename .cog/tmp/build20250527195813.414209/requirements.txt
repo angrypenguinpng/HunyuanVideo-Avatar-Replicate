@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch==2.4.0
+torchvision==0.19.0
+torchaudio==2.4.0
+gradio==3.39.0
+diffusers==0.33.0
+transformers==4.41.2
+loguru
+einops
+ninja
